@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Event Time Monitorings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Group events</th>
+      <th>Event start time</th>
+      <th>Event end time</th>
+      <th>Event duration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event_time_monitorings.each do |event_time_monitoring| %>
+      <tr>
+        <td><%= event_time_monitoring.group_events_id %></td>
+        <td><%= event_time_monitoring.event_start_time %></td>
+        <td><%= event_time_monitoring.event_end_time %></td>
+        <td><%= event_time_monitoring.event_duration %></td>
+        <td><%= link_to 'Show', event_time_monitoring %></td>
+        <td><%= link_to 'Edit', edit_event_time_monitoring_path(event_time_monitoring) %></td>
+        <td><%= link_to 'Destroy', event_time_monitoring, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event Time Monitoring', new_event_time_monitoring_path %>

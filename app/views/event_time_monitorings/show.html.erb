@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Group events:</strong>
+  <%= @event_time_monitoring.group_events_id %>
+</p>
+
+<p>
+  <strong>Event start time:</strong>
+  <%= @event_time_monitoring.event_start_time %>
+</p>
+
+<p>
+  <strong>Event end time:</strong>
+  <%= @event_time_monitoring.event_end_time %>
+</p>
+
+<p>
+  <strong>Event duration:</strong>
+  <%= @event_time_monitoring.event_duration %>
+</p>
+
+<%= link_to 'Edit', edit_event_time_monitoring_path(@event_time_monitoring) %> |
+<%= link_to 'Back', event_time_monitorings_path %>

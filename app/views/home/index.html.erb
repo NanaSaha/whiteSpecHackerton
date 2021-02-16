@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col80">
+    <p id="notice"><%= notice %></p>
+    <h1>Group Events</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Event days</th>
+          <th>Event name</th>
+          <th>Description</th>
+          <th>Location</th>
+          <th> Event Start Time</th>
+          <th> Event End Time</th>
+          <th>Published Status</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @group_events.each do |group_event| %>
+          <tr>
+            <td><%= group_event.id %></td>
+            <td><%= group_event.event_days %></td>
+            <td><%= group_event.event_name %></td>
+            <td><%= group_event.description %></td>
+            <td><%= group_event.location %></td>
+            <td><%= group_event.event_start_time %></td>
+            <td><%= group_event.event_end_time %></td>
+            <td><%= group_event.published %></td>
+            <td><%= link_to 'Publish event', publish_event_path(:event_id => group_event.id) %></td>
+            <td><%= link_to 'Delete', delete_event_path(:event_id => group_event.id), data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+    <%= link_to 'New Group Event', new_group_event_path %>
+  </div>
+  <div class="col20">
+    <h1>Users</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Email</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.username %></td>
+            <td><%= user.email %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+    <%= link_to 'Create New User', new_user_path %>
+  </div>
+</div>

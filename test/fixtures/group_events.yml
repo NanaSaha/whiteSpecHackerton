@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_days: 1
+  event_name: MyString
+  description: MyString
+  location: MyString
+  user_id: 1
+  deleted: false
+  published: false
+  status: false
+
+two:
+  event_days: 1
+  event_name: MyString
+  description: MyString
+  location: MyString
+  user_id: 1
+  deleted: false
+  published: false
+  status: false

@@ -1,0 +1,42 @@
+<%= form_with(model: @group_event, url:create_events_path) do |form| %>
+  <div class="field">
+    <%= form.label :event_days %>
+    <%= form.number_field :event_days %>
+  </div>
+  <div class="field">
+    <%= form.label :event_name %>
+    <%= form.text_field :event_name %>
+  </div>
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
+  <div class="field">
+    <%= form.label :event_start_time %>
+    <%= form.datetime_field :event_start_time %>
+  </div>
+  <div class="field">
+    <%= form.label :event_end_time %>
+    <%= form.datetime_field :event_end_time %>
+  </div>
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id%>
+  </div>
+  <div class="field">
+    <%= form.hidden_field :deleted %>
+  </div>
+  <div class="field">
+    <%= form.hidden_field :published %>
+  </div>
+  <div class="field">
+    <%= form.hidden_field :status %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

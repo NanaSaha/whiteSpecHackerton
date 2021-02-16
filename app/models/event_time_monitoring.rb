@@ -1,0 +1,2 @@
+class EventTimeMonitoring < ApplicationRecord
+end

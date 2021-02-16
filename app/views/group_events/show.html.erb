@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event days:</strong>
+  <%= @group_event.event_days %>
+</p>
+
+<p>
+  <strong>Event name:</strong>
+  <%= @group_event.event_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @group_event.description %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @group_event.location %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @group_event.user_id %>
+</p>
+
+<p>
+  <strong>Deleted:</strong>
+  <%= @group_event.deleted %>
+</p>
+
+<p>
+  <strong>Published:</strong>
+  <%= @group_event.published %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @group_event.status %>
+</p>
+
+<%= link_to 'Edit', edit_group_event_path(@group_event) %> |
+<%= link_to 'Back', group_events_path %>
